@@ -3,10 +3,11 @@
 
 tag @s add ozosummoner
 
-execute as @s at @s align xyz run summon minecraft:armor_stand ~0.5 ~-1.38 ~0.5 {Invisible:1b,Health:0.5f,NoGravity:1b,Tags:["ozobot","ozonew"],ArmorItems:[{},{},{},{id:"minecraft:white_stained_glass",Count:1b,tag:{display:{Name:'{"text":"Ozobot"}',Lore:['{"text":"Drop Item To Summon Ozobot!"}']}}}]}
+execute as @s at @s align xyz run summon minecraft:armor_stand ~0.5 ~-1.38 ~0.5 {Invisible:1b,Health:0.5f,NoGravity:1b,Tags:["ozobot","ozonew","tectlang"],ArmorItems:[{},{},{},{id:"minecraft:white_stained_glass",Count:1b,tag:{display:{Name:'{"text":"Ozobot"}',Lore:['{"text":"Drop Item To Summon Ozobot!"}']}}}]}
 
 execute as @e[tag=ozonew] at @s run tellraw @a[distance=..24] "Summoned Ozobot"
 scoreboard players set @e[tag=ozonew] move 80
+scoreboard players set @e[tag=ozonew] load 0
 scoreboard players set @e[tag=ozonew] speed 4
 tag @e[tag=ozonew] add S-Y
 tag @e[tag=ozonew] add D+X
